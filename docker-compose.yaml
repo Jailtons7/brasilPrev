@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:12
+    ports:
+      - "5433:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    env_file:
+      - .env
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: "/usr/local/bin/gunicorn brasilPrev.wsgi:application --bind 0.0.0.0:8002"
+    volumes:
+      - .:/app
+      - /dev/log:/dev/log
+      - static_volume:/app/staticfiles
+    ports:
+      - "8002:8002"
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  nginx:
+    build: etc/nginx
+    volumes:
+      - static_volume:/app/staticfiles
+    ports:
+      - "1337:80"
+    depends_on:
+      - web
+
+volumes:
+  db-data:
+  static_volume:

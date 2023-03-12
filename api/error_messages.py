@@ -1,0 +1,7 @@
+PRAZO_EXPIRADO = 'O prazo para venda deste plano expirou!'
+APORTE_MINIMO = 'O aporte mínimo é %.2f!'
+IDADE_INVALIDA = 'A idade do cliente precisa ser entre {} e {} para contratar esse plano!'
+APORTE_EXTRA_MINIMO = 'O aporte extra mínimo é %.2f!'
+APORTE_INSUFICIENTE = 'O valor máximo para resgate é %.2f'
+CARENCIA_INICIAL = 'O prazo mínimo para resgate é {}!'
+CARENCIA_ENTRE_RESGATES = 'O prazo mínimo entre resgates é {}!'
