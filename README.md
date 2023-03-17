@@ -63,9 +63,3 @@ make collectstatic
 ```shell
 make tests
 ```
-
-### Contato
-Caso surja dúvida ou a necessidade de algum esclarecimento pode entrar em contrato:
-
-- E-mail: jailtonsouza7@gmail.com
-- WhatsApp: 82 9 88432817
